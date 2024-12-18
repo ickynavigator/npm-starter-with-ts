@@ -1,0 +1,77 @@
+{
+  "name": "npm-starter-with-ts",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "UNLICENSED",
+  "description": "A starter template for npm packages written in TypeScript",
+  "author": "Obi Fortune <gabrielobi.of@gmail.com> (https://github.com/ickynavigator)",
+  "contributors": [
+    "Adewemimo Abiona <quadratwemimo@gmail.com> (https://github.com/abiona01)"
+  ],
+  "homepage": "https://github.com/ickynavigator/npm-starter-with-ts#readme",
+  "bugs": {
+    "url": "https://github.com/ickynavigator/npm-starter-with-ts/-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ickynavigator/npm-starter-with-ts.git"
+  },
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest run --coverage",
+    "test:update": "vitest run --coverage --update",
+    "test:ui": "vitest --ui --update",
+    "test:ci": "cross-env CI=true vitest run --coverage --no-color",
+    "profile": "vite-bundle-visualizer",
+    "profile:ci": "vite-bundle-visualizer profile --open false",
+    "lint": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:ci": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "check-exports": "attw . --pack -f table-flipped"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.0",
+    "@eslint/js": "^9.15.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
+    "@types/eslint": "^9.6.1",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "20",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
+    "@vitest/coverage-istanbul": "^2.1.6",
+    "@vitest/ui": "^2.1.6",
+    "acorn": "^8.14.0",
+    "ajv": "^8.13.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "prettier": "^3.4.1",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.16.0",
+    "vite": "^6.0.1",
+    "vite-bundle-visualizer": "^1.2.1",
+    "vite-plugin-dts": "^4.3.0",
+    "vitest": "^2.1.6"
+  }
+}

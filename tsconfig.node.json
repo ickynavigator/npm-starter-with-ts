@@ -1,0 +1,13 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        /* Extras */
+        "composite": true,
+        "resolveJsonModule": true,
+    },
+    "include": [
+        "vite.config.ts",
+        "vitest.config.ts",
+        "package.json"
+    ]
+}

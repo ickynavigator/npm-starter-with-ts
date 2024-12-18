@@ -1,0 +1,36 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        /* Strictness */
+        "noImplicitOverride": true,
+        /* Typescript Transpiling */
+        "outDir": "dist",
+        "rootDir": "src",
+        "sourceMap": true,
+        /* Typescript Transpiling - library */
+        "declaration": true,
+        "declarationMap": true,
+        "emitDeclarationOnly": true,
+        /* Extras */
+        "noEmit": true,
+        "forceConsistentCasingInFileNames": true,
+        "useDefineForClassFields": true,
+        "allowSyntheticDefaultImports": true,
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "ESNext"
+        ],
+        "types": [
+            "vitest/globals"
+        ],
+    },
+    "include": [
+        "src",
+    ],
+    "references": [
+        {
+            "path": "./tsconfig.node.json"
+        }
+    ]
+}
